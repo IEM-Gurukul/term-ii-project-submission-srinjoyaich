@@ -13,4 +13,19 @@ class ParkingLot {
         }
     }
 
+    public void parkVehicle(Vehicle vehicle) {
+        for (ParkingSlot slot : slots) {
+            if (!slot.isOccupied()) {
+                slot.parkVehicle(vehicle);
+
+                Ticket ticket = new Ticket(vehicle, slot.getSlotNumber());
+                activeTickets.put(vehicle.getNumber(), ticket);
+
+                System.out.println("Vehicle parked at Slot: " + slot.getSlotNumber());
+                return;
+            }
+        }
+        System.out.println("Parking Full!");
+    }
+
 }
