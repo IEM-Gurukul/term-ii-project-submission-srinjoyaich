@@ -28,4 +28,28 @@ class ParkingLot {
         System.out.println("Parking Full!");
     }
 
+     public void exitVehicle(String vehicleNumber) {
+        Ticket ticket = activeTickets.get(vehicleNumber);
+
+        if (ticket == null) {
+            System.out.println("Vehicle not found!");
+            return;
+        }
+
+        double bill = ticket.generateBill();
+
+        for (ParkingSlot slot : slots) {
+            if (slot.isOccupied() &&
+                slot.getVehicle().getNumber().equals(vehicleNumber)) {
+
+                slot.removeVehicle();
+                break;
+            }
+        }
+
+        ticket.printTicket(bill);
+        activeTickets.remove(vehicleNumber);
+    }
+
+
 }
