@@ -48,8 +48,9 @@ A main controller class provides a menu-driven interface to coordinate interacti
 all components. 
 
 ## How to Run
-
----
+1.Open the project in VS Code or any Java IDE and navigate to the src folder.
+2.Compile the program using javac *.java.
+3.Run the application using java Main and follow the menu options.
 
 ## Git Discipline Notes
 Minimum 10 meaningful commits required.
