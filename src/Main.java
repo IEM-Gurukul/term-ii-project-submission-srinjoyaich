@@ -6,7 +6,7 @@ public class Main {
         ParkingLot parkingLot = new ParkingLot(5);
 
         while (true) {
-            System.out.println("\n===== SMART PARKING SYSTEM =====");
+            System.out.println("\n SMART PARKING SYSTEM ");
             System.out.println("1. Park Vehicle");
             System.out.println("2. Exit Vehicle");
             System.out.println("3. Show Available Slots");
